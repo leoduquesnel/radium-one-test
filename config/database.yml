@@ -1,0 +1,5 @@
+development:
+  adapter: postgresql
+  database: radium_one_test_development
+  pool: 5
+  timeout: 5000
