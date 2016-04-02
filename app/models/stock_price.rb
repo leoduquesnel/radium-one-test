@@ -15,4 +15,6 @@ class StockPrice < ActiveRecord::Base
 
   validates :stock_ticker_id, numericality: { greater_than: 0 }
   validates :price, numericality: { greater_than: 0 }
+
+  belongs_to :stock_ticker
 end
