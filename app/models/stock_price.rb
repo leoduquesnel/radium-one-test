@@ -3,7 +3,7 @@
 # Table name: stock_prices
 #
 #  id              :integer          not null, primary key
-#  date            :datetime
+#  date            :date
 #  price           :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
@@ -12,6 +12,9 @@
 
 class StockPrice < ActiveRecord::Base
   validates_presence_of :date, :price, :stock_ticker_id
+  validates :stock_ticker, presence: true
+
+  validates_uniqueness_of :date, :scope => :stock_ticker_id
 
   validates :stock_ticker_id, numericality: { greater_than: 0 }
   validates :price, numericality: { greater_than: 0 }
