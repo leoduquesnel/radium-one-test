@@ -11,7 +11,12 @@
 require 'test_helper'
 
 class StockTickerTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should have a name" do
+    st = StockTicker.new 
+    assert_not st.save
+
+    st = StockTicker.new(name: Array.new(4){[*"A".."Z"].sample}.join)
+    assert st.save
+  end
+
 end
