@@ -4,7 +4,7 @@
 #
 #  id              :integer          not null, primary key
 #  date            :date
-#  price           :integer
+#  price           :float
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  stock_ticker_id :integer
