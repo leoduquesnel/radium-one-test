@@ -1,4 +1,4 @@
-smokio-back-end
+Radium One Test by Léo Duquesnel
 ==
 
 ## How to set up the project:
