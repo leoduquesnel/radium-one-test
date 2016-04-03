@@ -8,6 +8,7 @@ Radium One Test by Léo Duquesnel
 `rake db:create && rake:db migrate`
 
 `rake stock_tickers:generate`
+
 `rake stock_prices:generate`
 
 You're ready
