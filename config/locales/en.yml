@@ -21,3 +21,4 @@
 
 en:
   stock_ticker_title: "Select a stock to see its prices"
+  placeholder_input_days: "Number of days you want (30 by default)"

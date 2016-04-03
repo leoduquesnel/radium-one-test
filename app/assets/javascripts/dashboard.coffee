@@ -14,6 +14,7 @@ bindStockTickers = () ->
 fetchStockPrices = (id) ->
   if id
     $("#stock-prices-chart-wrapper").empty()
+    
     margin = {top: 60, right: 20, bottom: 30, left: 50}
     width = 800 - margin.left - margin.right
     height = 500 - margin.top - margin.bottom
@@ -47,9 +48,9 @@ fetchStockPrices = (id) ->
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
+    limit = if $("#days").val() > 0 then '?limit=' + $("#days").val() else ''
 
-
-    d3.json '/stock_tickers/' + id + '.json', (error, data) ->
+    d3.json '/stock_tickers/' + id + '.json' + limit, (error, data) ->
       if error
         throw error
 
