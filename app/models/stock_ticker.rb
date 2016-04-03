@@ -13,4 +13,8 @@ class StockTicker < ActiveRecord::Base
   validates_uniqueness_of :name
 
   has_many :stock_prices
+
+  def to_s
+    name
+  end
 end
