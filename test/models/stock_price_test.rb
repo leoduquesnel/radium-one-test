@@ -17,7 +17,7 @@ class StockPriceTest < ActiveSupport::TestCase
     sp = StockPrice.new
     assert_not sp.save
     
-    st = StockTicker.create(name: Array.new(4){[*"A".."Z"].sample}.join)
+    st = StockTicker.create(name: StockTicker.generate_name)
     if st.present?
       sp = StockPrice.new(date: DateTime.now, price: rand(1..1000), stock_ticker_id: st.id)
       assert sp.save
@@ -25,7 +25,7 @@ class StockPriceTest < ActiveSupport::TestCase
   end
 
   test "should have price > 0" do
-    st = StockTicker.create(name: Array.new(4){[*"A".."Z"].sample}.join)
+    st = StockTicker.create(name: StockTicker.generate_name)
     if st.present?
       sp = StockPrice.new(date: DateTime.now, price: -12, stock_ticker_id: st.id)
       assert_not sp.save

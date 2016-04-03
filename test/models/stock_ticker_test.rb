@@ -15,7 +15,7 @@ class StockTickerTest < ActiveSupport::TestCase
     st = StockTicker.new 
     assert_not st.save
 
-    st = StockTicker.new(name: Array.new(4){[*"A".."Z"].sample}.join)
+    st = StockTicker.new(name: StockTicker.generate_name)
     assert st.save
   end
 

@@ -19,4 +19,8 @@ class StockTicker < ActiveRecord::Base
   def to_s
     name
   end
+
+  def generate_name
+    Array.new(4){[*"A".."Z"].sample}.join
+  end
 end
