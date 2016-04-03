@@ -5,7 +5,8 @@
     .input-days-wrapper
       = number_field_tag :days, nil, class: 'form-control', placeholder: t('placeholder_input_days')
     .list-group
-      = render @stock_tickers
+      = cache @stock_tickers do
+        = render @stock_tickers
     .pagination
       = paginate @stock_tickers
 .col-md-8
