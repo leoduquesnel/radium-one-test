@@ -1,4 +1,10 @@
 .col-md-4
   #stock-tickers-wrapper
+    %h3.title
+      = t('stock_ticker_title')
+    .list-group
+      = render @stock_tickers
+    .pagination
+      = paginate @stock_tickers
 .col-md-8
   #stock-prices-chart-wrapper

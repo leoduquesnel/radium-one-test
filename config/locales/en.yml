@@ -20,4 +20,4 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  stock_ticker_title: "Select a stock to see its prices"
