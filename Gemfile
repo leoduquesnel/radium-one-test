@@ -16,8 +16,8 @@ gem 'kaminari'
 gem 'jbuilder', '~> 2.0'
 gem 'haml'
 
+gem 'jquery-rails'
 source 'https://rails-assets.tenex.tech' do
-  gem 'rails-assets-jquery'
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-d3'
 end
@@ -27,7 +27,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'quiet_assets'
 end
