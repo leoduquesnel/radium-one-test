@@ -20,6 +20,7 @@ gem 'jquery-rails'
 source 'https://rails-assets.tenex.tech' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-d3'
+  gem 'rails-assets-highstock'
 end
 
 group :development, :test do
