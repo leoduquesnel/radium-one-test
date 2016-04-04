@@ -14,12 +14,9 @@ bindStockTickers = () ->
     window.loadStockPricesHighStock()
 
 window.requestData = (chart, url) ->
-  setTimeout(() ->
-    $.getJSON url, (data) ->
-      data = data.map (current) -> [Date.parse(current.date), current.price]
-      chart.options.series[0].data = data
-      setTimeout(window.requestData(chart, url), 1000)
-  , 1000)
+  $.getJSON url, (data) ->
+    data = data.map (current) -> [Date.parse(current.date), current.price]
+    chart.series[0].setData(data)
   
 window.clearIntervals = () ->
   i = 1
@@ -37,9 +34,7 @@ window.loadStockPricesHighStock = () ->
         type: 'spline'
         events: {
           load: () ->
-            $.getJSON url, (data) ->
-              data = data.map (current) -> [Date.parse(current.date), current.price]
-              chart.series[0].setData(data) 
+            window.requestData(chart, url)
         } 
       }
       rangeSelector: {
@@ -65,7 +60,5 @@ window.loadStockPricesHighStock = () ->
     window.clearIntervals()
 
     setInterval (e) ->
-      $.getJSON url, (data) ->
-        data = data.map (current) -> [Date.parse(current.date), current.price]
-        chart.series[0].setData(data) 
-    , 500
+      window.requestData(chart, url)
+    , 750
