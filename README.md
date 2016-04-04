@@ -15,6 +15,8 @@ You're ready
 
 ## Run tests
 
-`RAILS_ENV=test rake db:create && rake:db migrate`
+`RAILS_ENV=test rake db:create`
+
+`RAILS_ENV=test rake:db migrate`
 
 `rake test`
