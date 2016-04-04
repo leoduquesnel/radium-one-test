@@ -2,8 +2,6 @@
   #stock-tickers-wrapper
     %h3.title
       = t('stock_ticker_title')
-    .input-days-wrapper
-      = number_field_tag :days, nil, class: 'form-control', placeholder: t('placeholder_input_days')
     .add-value-btn
       = form_for @stock_price, remote: true do |f|
         = f.hidden_field :stock_ticker_id
@@ -15,3 +13,4 @@
       = paginate @stock_tickers
 .col-md-8
   #stock-prices-chart-wrapper
+  #stock-prices-highstock-wrapper

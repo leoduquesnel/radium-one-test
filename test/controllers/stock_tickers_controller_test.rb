@@ -11,9 +11,6 @@ class StockTickersControllerTest < ActionController::TestCase
     assert_response :success, 'route works'
 
     get :show, id: st.id, format: 'json'
-    assert JSON.parse(response.body).count == 30, 'normal results'
-
-    get :show, id: st.id, limit: 10, format: 'json'
-    assert JSON.parse(response.body).count == 10, '10 results'
+    assert JSON.parse(response.body).count > 0, 'normal results'
   end
 end

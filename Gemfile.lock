@@ -54,6 +54,8 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
+    highstock-rails (2.1.10)
+      railties (>= 3.1)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -97,8 +99,6 @@ GEM
       sprockets-rails
     rails-assets-bootstrap (3.3.6)
       rails-assets-jquery (>= 1.9.1, < 3)
-    rails-assets-d3 (3.5.16)
-    rails-assets-highstock (3.0.1)
     rails-assets-jquery (2.2.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -149,6 +149,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   haml
+  highstock-rails
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
@@ -156,8 +157,6 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.2.5)
   rails-assets-bootstrap!
-  rails-assets-d3!
-  rails-assets-highstock!
   rails_12factor
   sass-rails (~> 5.0)
   spring
