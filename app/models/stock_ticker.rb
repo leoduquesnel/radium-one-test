@@ -20,7 +20,7 @@ class StockTicker < ActiveRecord::Base
     name
   end
 
-  def generate_name
+  def self.generate_name
     Array.new(4){[*"A".."Z"].sample}.join
   end
 end

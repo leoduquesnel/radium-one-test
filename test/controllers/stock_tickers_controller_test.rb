@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StockTickersControllerTest < ActionController::TestCase
   test "should get show" do
-    st = StockTicker.create(name: Array.new(4){[*"A".."Z"].sample}.join)
+    st = StockTicker.create(name: StockTicker.generate_name)
     30.times do |i|
       StockPrice.create(stock_ticker: st, date: Date.today + i.day, price: rand(1..1000))
     end
