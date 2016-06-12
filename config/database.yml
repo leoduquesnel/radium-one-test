@@ -1,11 +1,11 @@
 development:
   adapter: postgresql
-  database: radium_one_test_development
+  database: stock_simulator_development
   pool: 5
   timeout: 5000
 
 test:
   adapter: postgresql
-  database: radium_one_test_test
+  database: stock_simulator_test
   pool: 5
   timeout: 5000

@@ -1,4 +1,4 @@
-Radium One Test by Léo Duquesnel
+Stock prices simulator by Léo Duquesnel
 ==
 
 ## How to set up the project:
@@ -20,3 +20,7 @@ You're ready
 `RAILS_ENV=test rake:db migrate`
 
 `rake test`
+
+## Demo
+
+on: https://damp-basin-79467.herokuapp.com/
